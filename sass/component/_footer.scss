@@ -6,6 +6,7 @@
 
 .footer__conteiner {
   display: flex;
+  align-items: baseline;
   @media screen and (max-width: 768px) {
     text-align: center;
     flex-direction: column;
@@ -16,7 +17,6 @@
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
-    // text-align: center;
   }
 }
 

@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/mixin";
 @import "./component/other";
 @import "./component/header";
 @import "./component/hero";
@@ -7,7 +8,6 @@
 @import "./component/team";
 @import "./component/regular-customer";
 @import "./component/footer";
-@import "./component/portfolio";
 @import "./component/modal";
 @import "./component/mini-modal";
-@import "./component/mixin";
+@import "./component/portfolio";

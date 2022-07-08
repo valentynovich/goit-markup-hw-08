@@ -56,9 +56,74 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg class="menu-open__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu-open_24-16px"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu-container is-hidden" data-menu>
+        <div class="container-content-menu">
+          <button type="button" class="menu-close" data-menu-close>
+            <svg class="menu-close__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+          <ul class="menu__list-menu list">
+            <li class="menu__item-menu">
+              <a href="" class="menu_link-menu link">Студия</a>
+            </li>
+            <li class="menu__item-menu">
+              <a href="" class="menu_link-menu link">Портфолио</a>
+            </li>
+            <li class="menu__item-menu">
+              <a href="" class="menu_link-menu link">Контакты</a>
+            </li>
+          </ul>
+          <div class="social-contact">
+            <ul class="menu__contact-list list">
+              <li class="menu__contact-item">
+                <a href="" class="menu__contact-link link">+38 096 111 11 11</a>
+              </li>
+              <li class="menu__contact-item">
+                <a
+                  href=""
+                  class="menu__contact-link link menu__contact-link--mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="menu__social-list list">
+              <li class="menu__social-item">
+                <a
+                  href=""
+                  class="menu__social-link menu__social-link--line link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="menu__social-item">
+                <a
+                  href=""
+                  class="menu__social-link menu__social-link--line link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="menu__social-item">
+                <a
+                  href=""
+                  class="menu__social-link menu__social-link--line link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="menu__social-item">
+                <a href="" class="menu__social-link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
-    <maiax
+    <main>
       <section class="section portfolio">
         <div class="container">
           <h1 class="visually-hidden"></h1>
@@ -593,6 +658,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/menu.js"></script>
   </body>
 </html>

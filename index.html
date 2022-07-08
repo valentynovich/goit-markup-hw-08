@@ -27,15 +27,6 @@
         <a class="link header__logo logo" href=""
           >Web<span class="header__logo-part">Studio</span></a
         >
-        <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg class="menu-toggle__icon" width="24" height="24">
-            <use href="./images/icons.svg#menu-24px"></use>
-          </svg>
-        </button>
         <nav class="site-nav">
           <ul class="list site-list">
             <li class="site-list__item">
@@ -65,6 +56,73 @@
                 <use href="./images/icons.svg#icon-Vector-header"></use></svg
               >+38 096 111 11 11</a
             >
+          </li>
+        </ul>
+        <button
+          class="menu-toggle menu-toggle--open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mini-modal__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu-open_24-16px"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu-container js-menu-container" id="mobaile-menu">
+        <button class="menu-toggle menu-toggle--close js-close-menu">
+          <svg class="mini-modal__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+        <ul class="mini-modal__list-menu list">
+          <li class="mini-modal__item-menu">
+            <a href="" class="mini-modal_link-menu link">Студия</a>
+          </li>
+          <li class="mini-modal__item-menu">
+            <a href="" class="mini-modal_link-menu link">Портфолио</a>
+          </li>
+          <li class="mini-modal__item-menu">
+            <a href="" class="mini-modal_link-menu link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mini-modal__contact-list list">
+          <li class="mini-modal__contact-item">
+            <a href="" class="mini-modal__contact-link link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mini-modal__contact-item">
+            <a
+              href=""
+              class="mini-modal__contact-link link mini-modal__contact-link--mail"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mini-modal__social-list list">
+          <li class="mini-modal__social-item">
+            <a
+              href=""
+              class="mini-modal__social-link mini-modal__social-link--line link"
+              >Instagram</a
+            >
+          </li>
+          <li class="mini-modal__social-item">
+            <a
+              href=""
+              class="mini-modal__social-link mini-modal__social-link--line link"
+              >Twitter</a
+            >
+          </li>
+          <li class="mini-modal__social-item">
+            <a
+              href=""
+              class="mini-modal__social-link mini-modal__social-link--line link"
+              >Facebook</a
+            >
+          </li>
+          <li class="mini-modal__social-item">
+            <a href="" class="mini-modal__social-link link">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -144,7 +202,8 @@
           <ul class="list work-list">
             <li class="work-list__item">
               <img
-                src="./images/1img.jpg"
+                srcset="./images/1img1.jpg 1x, ./images/1img1-2x.jpg 2x"
+                src="./images/1img1.jpg"
                 alt="печатает"
                 width="370"
                 height="294"
@@ -157,6 +216,7 @@
             </li>
             <li class="work-list__item">
               <img
+                srcset="./images/1img2.jpg 1x, ./images/1img2-2x.jpg 2x"
                 src="./images/1img2.jpg"
                 alt="смотрит на экран"
                 width="370"
@@ -168,6 +228,7 @@
             </li>
             <li class="work-list__item">
               <img
+                srcset="./images/1img3.jpg 1x, ./images/1img3-2x.jpg 2x"
                 src="./images/1img3.jpg"
                 alt="работает с планшетом"
                 width="370"
@@ -185,12 +246,36 @@
           <h2 class="team__title title-h2">Наша команда</h2>
           <ul class="list team-list">
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/2img-mob-1-1x.jpg 1x,
+                    ./images/2img-mob-1-2x.jpg 2x
+                  "
+                  media="(max-width: 767.5px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-tab-1-1x.jpg 1x,
+                    ./images/2img-tab-1-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-desk-1-1x.jpg 1x,
+                    ./images/2img-desk-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/1img.jpg" alt="печатает" />
+              </picture>
+              <!-- <img
                 src="./images/2img1.jpg"
                 alt="Игорь Демьяненко"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-list__content">
                 <h3 class="team-list__name">Игорь Демьяненко</h3>
                 <p lang="en" class="team-list__pr">Product Designer</p>
@@ -226,12 +311,36 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/2img-mob-2-1x.jpg 1x,
+                    ./images/2img-mob-2-2x.jpg 2x
+                  "
+                  media="(max-width: 767.5px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-tab-2-1x.jpg 1x,
+                    ./images/2img-tab-2-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-desk-2-1x.jpg 1x,
+                    ./images/2img-desk-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/1img.jpg" alt="печатает" />
+              </picture>
+              <!-- <img
                 src="./images/2img2.jpg"
                 alt="Ольга Репина"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-list__content">
                 <h3 class="team-list__name">Ольга Репина</h3>
                 <p lang="en" class="team-list__pr">Frontend Developer</p>
@@ -267,12 +376,36 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/2img-mob-3-1x.jpg 1x,
+                    ./images/2img-mob-3-2x.jpg 2x
+                  "
+                  media="(max-width: 767.5px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-tab-3-1x.jpg 1x,
+                    ./images/2img-tab-3-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-desk-3-1x.jpg 1x,
+                    ./images/2img-desk-3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/1img.jpg" alt="печатает" />
+              </picture>
+              <!-- <img
                 src="./images/2img3.jpg"
                 alt="Николай Тарасов"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-list__content">
                 <h3 class="team-list__name">Николай Тарасов</h3>
                 <p lang="en" class="team-list__pr">Product Designer</p>
@@ -308,12 +441,36 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/2img-mob-4-1x.jpg 1x,
+                    ./images/2img-mob-4-2x.jpg 2x
+                  "
+                  media="(max-width: 767.5px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-tab-4-1x.jpg 1x,
+                    ./images/2img-tab-4-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/2img-desk-4-1x.jpg 1x,
+                    ./images/2img-desk-4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/1img.jpg" alt="печатает" />
+              </picture>
+              <!-- <img
                 src="./images/2img4.jpg"
                 alt="Михаил Ермаков"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-list__content">
                 <h3 class="team-list__name">Михаил Ермаков</h3>
                 <p lang="en" class="team-list__pr">UI Designer</p>
@@ -585,68 +742,14 @@
         </form>
       </div>
     </div>
-    <div class="menu-container js-menu-container" id="mobaile-menu">
-      <button class="menu-toggle js-close-menu">
-        <svg class="mini-modal__icon" width="40" height="40">
-          <use href="./images/icons.svg#icon-close_40px"></use>
-        </svg>
-      </button>
-      <ul class="mini-modal__list-menu list">
-        <li class="mini-modal__item-menu">
-          <a href="" class="mini-modal_link-menu link">Студия</a>
-        </li>
-        <li class="mini-modal__item-menu">
-          <a href="" class="mini-modal_link-menu link">Портфолио</a>
-        </li>
-        <li class="mini-modal__item-menu">
-          <a href="" class="mini-modal_link-menu link">Контакты</a>
-        </li>
-      </ul>
-      <ul class="mini-modal__contact-list list">
-        <li class="mini-modal__contact-item">
-          <a href="" class="mini-modal__contact-link link">+38 096 111 11 11</a>
-        </li>
-        <li class="mini-modal__contact-item">
-          <a
-            href=""
-            class="mini-modal__contact-link link mini-modal__contact-link--mail"
-            >info@devstudio.com</a
-          >
-        </li>
-      </ul>
-      <ul class="mini-modal__social-list list">
-        <li class="mini-modal__social-item">
-          <a
-            href=""
-            class="mini-modal__social-link mini-modal__social-link--line link"
-            >Instagram</a
-          >
-        </li>
-        <li class="mini-modal__social-item">
-          <a
-            href=""
-            class="mini-modal__social-link mini-modal__social-link--line link"
-            >Twitter</a
-          >
-        </li>
-        <li class="mini-modal__social-item">
-          <a
-            href=""
-            class="mini-modal__social-link mini-modal__social-link--line link"
-            >Facebook</a
-          >
-        </li>
-        <li class="mini-modal__social-item">
-          <a href="" class="mini-modal__social-link link">LinkedIn</a>
-        </li>
-      </ul>
-    </div>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

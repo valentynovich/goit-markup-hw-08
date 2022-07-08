@@ -183,26 +183,25 @@ img {
   color: var(--blue);
 }
 
-.curent {
+.site-list__link--curent {
   color: var(--blue);
   position: relative;
 }
-.curent::after {
+.site-list__link--curent::after {
   content: "";
   height: 4px;
   width: 100%;
   background-color: var(--blue);
   border-radius: 2px;
-  /* margin-top: 28px; */
   position: absolute;
 }
 @media screen and (min-width: 768px) {
-  .curent::after {
+  .site-list__link--curent::after {
     top: 46px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .curent::after {
+  .site-list__link--curent::after {
     top: 45px;
   }
 }
@@ -1071,7 +1070,7 @@ img {
 
 .container-content-menu {
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
   padding: 45px 20px;
   width: 100%;
   height: 100%;
@@ -1118,6 +1117,10 @@ img {
 }
 .menu_link-menu:hover, .menu_link-menu:focus {
   color: #2196f3;
+}
+
+.menu_link-menu--сurent {
+  color: var(--blue);
 }
 
 .menu__contact-list {

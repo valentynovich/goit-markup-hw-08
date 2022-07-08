@@ -467,7 +467,7 @@ img {
   font-style: normal;
 }
 
-.footer-item-link:not(:lasr-child) {
+.footer-item-link:not(:last-child) {
   margin-bottom: 9px;
 }
 
